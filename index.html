@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>LUDO</h1>
+<p class="subtitle">Classic Board Game</p>
+
+<div class="game-wrap">
+  <div class="board" id="board"></div>
+
+  <div class="sidebar">
+    <div class="panel">
+      <div class="panel-title">Players</div>
+      <div id="players-list"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Your Turn</div>
+      <div class="dice-area">
+        <div class="dice" id="dice">🎲</div>
+        <button class="roll-btn" id="roll-btn" onclick="rollDice()">Roll Dice</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Status</div>
+      <div class="status-text" id="status-text">
+        <strong id="turn-label">Red's Turn</strong>
+        <span id="action-label">Roll the dice to begin</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Game Log</div>
+      <div class="log" id="game-log"></div>
+    </div>
+  </div>
+</div>
+
+<div class="win-overlay" id="win-overlay">
+  <div class="win-box">
+    <div class="win-emoji">🏆</div>
+    <div class="win-title" id="win-title">Red Wins!</div>
+    <div class="win-sub">Congratulations on finishing all tokens!</div>
+    <button class="restart-btn" onclick="restartGame()">Play Again</button>
+  </div>
+</div>
+
+<script src="ludo.js"></script>
+</body>
+</html>
